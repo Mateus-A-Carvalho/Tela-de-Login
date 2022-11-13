@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Ephesis&family=Noto+Sans&family=Playfair+Display&display=swap');
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+    /* Elemento body vem com uma margim padrão de 8px. Colocar margin: 0; para nulificá-la. */
+    margin: 0;
+}
+
+body * {
+    box-sizing: border-box;
+}
+
+.main-login {
+    /* vw = porcentagem da largura do viewport. Ex: 1vw = 1% da largura do viewport. Se a viewport é 1000px(tela), 1vw vai ser 1% de 1000px, que é igual a 10px */
+    width: 100vw;
+    height: 100vh;
+    background-color: #201b2c;
+    /* Display: flex; deixa os elementos lado a lado */
+    display: flex;
+    /* Justify-content centraliza as coisas no EIXO X */
+    justify-content: center;
+    /* align-items centraliza as coisas no EIXO Y */
+    align-items: center;
+}
+
+.left-login-image {
+    width: 35vw;
+}
+
+.left-login {
+    /* width: 50vw diz que essa div irá ocupar apenas 50% da tela */
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-direction coloca elementos um abaixo do outro mesmo usando a propriedade display: flex; */
+    flex-direction: column;
+}
+
+.left-login > h1 {
+    font-size: 3vw;
+    color: #77ffc0;
+}
+
+.righ-login {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-login {
+    /* Diferente de por a porcentagem em vw, pondo 60% ocupará 60% do tamanho da DIV pai. Ou seja, 60% da div que ocupa 50% da viewport. */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* padding são margens internas. Tendo dois valores, o primeiro valor refere-se ao eixo Y */
+    padding: 30px 35px;
+    background: #2f2841;
+    border-radius: 20px;
+    /* Box-shadow - Primeiro valor refere-se ao X(sombra move-se para direita ou esquerda). Segundo valor refere-se ao Y(sombra move-se pra cima ou pra baixo). Terceiro valor refere-se ao Blur(Quanto maior o valor, maior o DESFOQUE). Quarto valor é Spread(Valor maior,se espalha, valor menor, encolhe).*/
+    box-shadow: 0px 10px 40px #00000056;
+}
+
+.card-login > h1 {
+    color: #00ff88;
+    font-weight: 800;
+    margin: 0;
+}
+
+.textfield {
+    margin: 10px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.textfield > input {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background: #514869;
+    color: #f0ffffde;
+    font-size: 12pt;
+    box-shadow: 0px 10px 40px #00000056;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.textfield > label {
+    color: #f0ffffde;
+    margin-bottom: 10px;
+}
+
+.textfield > input::placeholder {
+    color: #f0ffff94;
+}
+
+.btn-login {
+    width: 100%;
+    padding: 16px 0px;
+    margin: 25px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    /* text-trasform: uppercase transforma todas as letras em MAIÚSCULAS */
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #2b134b;
+    background: #00ff88;
+    cursor: pointer;
+    box-shadow: 0px 10px 40px -12px #00ff8052;
+}
+
+/* @media only screen and (max-width: 950px) {
+    .card-login {
+         width: 85%; 
+    }
+} */
+
+@media only screen and (max-width: 600px) {
+     .main-login {
+        flex-direction: column;
+     }
+
+     .left-login > h1 {
+        display: none;
+     }
+
+     .left-login {
+        width: 100%;
+        height: auto;
+     }
+
+     .left-login-image {
+        width: 50vw;
+     }
+}
